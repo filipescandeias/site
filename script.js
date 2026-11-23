@@ -22,7 +22,7 @@ const translations = {
         "about-text-p5": "Nos meus tempos livres, gosto de gaming, jogos de tabuleiro e construção com LEGO, atividades que estimulam o raciocínio lógico, a criatividade e a capacidade de resolução de problemas. Tenho também interesse pelo desporto, valorizando a prática de atividades físicas como forma de bem-estar e desenvolvimento pessoal.",
         "about-text-p6": "Estou sempre disponível para aprender, crescer e abraçar novas experiências que contribuam para o meu desenvolvimento pessoal e profissional.",
         "about-cv": "Descarregar CV (PDF)",
-        "cv-file": "CV Português.pdf",
+        "cv-file": "CV_Filipe_Português.pdf",
         "video-src": "https://youtube.com/embed/UmHi-4WTIXk",
         "skills-title": "Competências",
         "skills-backend": "Backend",
@@ -66,12 +66,14 @@ const translations = {
         "cma-desc": "Prestei suporte técnico direto aos utilizadores, sendo responsável pela instalação e configuração de hardware e software.",
 
         "projects-title": "Projetos em Destaque",
-        "proj1-title": "Plataforma de Visualização Meteorológica",
-        "proj1-desc": "Aplicação web interativa que mapeia dados geográficos e meteorológicos por distritos através de camadas de mapas.",
         "proj2-title": "Plataforma de Gestão Desportiva",
         "proj2-desc": "Aplicação web para gestão desportiva, permitindo a organização de equipas, atletas e atividades ao nível amador.",
         "proj3-title": "Sistema de Gestão de Eventos",
         "proj3-desc": "Aplicação desenvolvida em Java para apoiar a gestão de eventos de espaços culturais, utilizando estruturas de dados.",
+        "proj4-title": "Plataforma de Venda de Bilhetes",
+        "proj4-desc": "Aplicação de bilheteira baseada em microsserviços, com controlo de concorrência na reserva de lugares. Projeto de grupo atualmente em desenvolvimento.",
+        "ongoing": "Em curso",
+        "group-project": "Projeto de grupo",
         "view-code": "Ver Código",
         
         "interesses-title": "Interesses",
@@ -99,7 +101,7 @@ const translations = {
         "about-text-p5": "In my free time, I enjoy gaming, board games, and building with LEGO, activities that stimulate logical thinking, creativity, and problem-solving skills. I am also interested in sports and value physical activity as a way to promote well-being and personal development.",
         "about-text-p6": "I am always eager to learn, grow, and embrace new experiences that contribute to my personal and professional development.",
         "about-cv": "Download CV (PDF)",
-        "cv-file": "CV Inglês.pdf",
+        "cv-file": "CV_Filipe_English.pdf",
         "video-src": "https://youtube.com/embed/mvprc_IAmPo",
         "skills-title": "Skills",
         "skills-backend": "Backend",
@@ -143,12 +145,14 @@ const translations = {
         "cma-desc": "Provided direct technical support to users, managing the installation and configuration of hardware and software.",
         
         "projects-title": "Featured Projects",
-        "proj1-title": "Weather Visualization Platform",
-        "proj1-desc": "Interactive web application mapping geographic and weather data by districts through dynamic map layers.",
         "proj2-title": "Sports Management Platform",
         "proj2-desc": "Web application for sports management, allowing the organization of teams, athletes, and activities.",
         "proj3-title": "Events Management System",
         "proj3-desc": "Application developed in Java to support event management in cultural spaces, utilizing data structures.",
+        "proj4-title": "Ticket Sales Platform",
+        "proj4-desc": "Microservices-based ticketing application with concurrency control for seat reservations. Group project currently in development.",
+        "ongoing": "In progress",
+        "group-project": "Group project",
         "view-code": "View Code",
         
         "interesses-title": "Interests",
@@ -183,6 +187,7 @@ function atualizarIdioma() {
     const cvBtn = document.getElementById('cv-btn');
     if (cvBtn && translations[currentLang]["cv-file"]) {
         cvBtn.setAttribute('href', translations[currentLang]["cv-file"]);
+        cvBtn.setAttribute('download', translations[currentLang]["cv-file"]);
     }
 
     // 3. Atualiza o iframe do vídeo (Português ou Inglês)
